@@ -1,0 +1,12 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.values {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    background: linear-gradient(180deg, #2d2d2d 0%, rgba(45, 45, 45, 0.6) 100%);
+  }
+}

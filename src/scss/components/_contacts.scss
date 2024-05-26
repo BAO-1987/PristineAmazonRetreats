@@ -1,0 +1,97 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.contacts {
+  position: relative;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner {
+    position: relative;
+    left: 0;
+    padding: 42px 50px;
+    width: 100%;
+    max-width: 470px;
+    background-color: rgba(45, 45, 45, 0.5);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 11px;
+
+    label,
+    textarea {
+      border: 0;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: none;
+    }
+
+    input,
+    textarea {
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      padding: 11 6px 10px 24px;
+      width: 100%;
+      max-width: 100%;
+      color: var(--color-gray-900);
+      background-color: var(--color-white);
+
+      &::placeholder {
+        font-size: 20px;
+        line-height: 1.6;
+        opacity: 0.6;
+      }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 17px;
+      line-height: 1.44;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--color-blue-300);
+    }
+  }
+
+  h2 {
+    position: absolute;
+    left: 49%;
+    top: 38px;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+
+  .btn {
+    max-width: 100%;
+    color: var(--color-dark-900);
+    background-color: var(--color-blue-300);
+  }
+
+  @include media(tablet-wide) {
+    h2 {
+      top: 10px;
+    }
+  }
+
+  @include media(mobile-l) {
+    input,
+    textarea {
+      padding: 10px;
+    }
+  }
+
+  @include media(mobile-m) {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}

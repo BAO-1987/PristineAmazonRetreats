@@ -1,0 +1,80 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.nav {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 24px;
+    }
+  }
+
+  &__link {
+    line-height: 1.62;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-blue-300);
+    }
+
+    &.true {
+      color: var(--color-blue-300);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+  }
+
+  &--footer {
+    padding: 50px 0;
+  }
+
+  @include media(desktop) {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &--footer {
+      padding: 25px 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+
+      #{$root}__inner {
+       flex-direction: column;
+       gap: 20px;
+      }
+
+       #{$root}__list {
+       flex-wrap: wrap;
+       justify-content: center;
+      }
+    }
+  }
+}

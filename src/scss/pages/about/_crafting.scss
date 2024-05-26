@@ -1,0 +1,77 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.crafting {
+  position: relative;
+  z-index: 1;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 32px;
+    gap: 24px;
+  }
+
+  li {
+    padding-right: 65px;
+  }
+
+  &__content {
+    position: relative;
+    padding: 55px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(24px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 40px;
+      width: 108px;
+      height: 108px;
+      background-image: url("../images/icons/mount.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__desc {
+    padding-left: 140px;
+  }
+
+  .title {
+    margin-bottom: 36px;
+  }
+
+  @include media(tablet-wide) {
+    li {
+      padding-right: 10px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      padding: 16px;
+
+      &::before {
+        position: relative;
+        left: 50%;
+        top: 0;
+        display: block;
+        margin-bottom: 15px;
+        width: 60px;
+        height: 60px;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__desc {
+      padding: 0;
+    }
+  }
+}

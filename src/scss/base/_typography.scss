@@ -1,0 +1,50 @@
+@use "../utils/functions/"as *;
+@use "../utils/mixins/"as *;
+
+h1,
+h2,
+h3,
+.slogan {
+  overflow: hidden;
+  margin-bottom: 32px;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--fw-400);
+  font-size: clamp(40px, 0.8333rem + 7.4074vi, 120px);
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  span {
+    color: var(--color-blue-300);
+  }
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(28px, 1.3333rem + 2.4074vi, 56px);
+  line-height: 1.21;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: clamp(20px, 0.5rem + 1.6667vi, 32px);
+  line-height: 1.18;
+}
+
+.subtext {
+  font-size: clamp(16px, 0.9167rem + 0.3704vi, 21px);
+}
+
+.slogan {
+  display: block;
+  margin-bottom: 32px;
+  font-family: var(--font-family-primary);
+  font-size: clamp(18px, 1rem + 0.5556vi, 24px);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-blue-300);
+
+  @include media(mobile-m) {
+    margin-bottom: 16px;
+  }
+}

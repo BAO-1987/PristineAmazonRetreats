@@ -1,0 +1,46 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.footer {
+  &__bottom {
+    padding: 10px 0;
+    background-color: var(--color-blue-900);
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    a {
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: var(--color-blue-300);
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__copy {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 25px;
+    }
+
+    &__policy {
+      justify-content: center;
+    }
+
+    .logo {
+      margin: 0 auto;
+    }
+  }
+}

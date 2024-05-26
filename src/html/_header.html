@@ -1,0 +1,86 @@
+<header class="{{header}}">
+  <div class="wrapper">
+    <nav class="nav">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="./images/logo.svg" alt="logo of Pristine Amazon Retreats" width="247" height="37"
+          loading="lazy" />
+      </a>
+
+      <button class="burger" aria-label="Mobile menu" type="button">
+        <span></span>
+      </button>
+
+      <div class="nav__inner">
+        <ul class="nav__list">
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'home' }}" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'about' }}" href="about.html">
+              About Us
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'tours' }}" href="tours.html">
+              Tours & Excursions
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'travel' }}" href="travel.html">
+              Destinations
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'articles' }}" href="articles.html">
+              Wildlife & Nature
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'articles' }}" href="articles.html">
+              Travel Tips
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <a class="btn btn--sign " href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn btn--request" type="button" formsappId="664b4b5b033ee153da4f91a3">
+           Explore Tours
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header');
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`
+    );
+  };
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+</script>
