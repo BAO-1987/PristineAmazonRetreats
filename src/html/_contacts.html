@@ -1,25 +1,26 @@
-<section class="contacts" style="background-image: url('./images/contacts.jpg')">
+<section class="contacts overlay" style="background-image: url('./images/contacts.jpg')">
 
-  <div class="contacts__inner">
+  <div class="container">
+    <div class="contacts__inner">
 
-    <div class="contacts__desc">
-      <h2>
-        Your Amazon journey starts now!
-      </h2>
+      <div class="contacts__desc">
+        <h2>
+          Your Amazon journey starts now!
+        </h2>
 
-      <p>
-        Start your exploration with us and anticipate an email shortly
-      </p>
+        <p>
+          Start your exploration with us and anticipate an email shortly
+        </p>
+      </div>
+
+      <form class="contacts__form">
+
+        <label for="userEmail">
+          <input type="email" placeholder="Your Email Address" id="userEmail" required />
+        </label>
+
+        <button class="btn btn--big" type="submit">Subscribe</button>
+      </form>
     </div>
-
-    <form class="contacts__form">
-
-      <label for="userEmail">
-        <span> e-mail </span>
-        <input type="email" placeholder="Your email" id="userEmail" required />
-      </label>
-
-      <button class="btn btn--big" type="submit">Subscribe</button>
-    </form>
   </div>
 </section>

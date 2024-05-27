@@ -25,22 +25,20 @@
   --color-white: #fff;
   --color-black: #000;
   --color-dark-900: #252b42;
+  --color-green-200: rgba(38, 160, 116, 0.8);
   --color-green-300: #26a074;
+  --color-green-400: #22614A;
   --color-gray-50: #eeeeee;
   --color-gray-300: #737373;
 
   //  radius
   --radius-main: 4px;
-  --radius-big: 16x;
+  --radius-big: 16px;
 
   // gradients
-  --white: linear-gradient(180deg, rgba(95, 161, 200, 0) 0%, #eee 100%), rgba(64, 114, 138, 0.2);
-  --wite-second: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, #eee 100%);
-  --gray: background: linear-gradient(180deg, rgba(114, 140, 122, 0) 0%, #22614a 100%),
-    rgba(
-      255,
-      255,
-      255,
-      0.2
-    );
+  --white: linear-gradient(180deg, rgba(95, 161, 200, 0) 83.581%, rgb(238, 238, 238) 100%);
+  --wite-second: linear-gradient(180.00deg, rgba(238, 238, 238, 0) 83.5%,rgb(238, 238, 238) 100%);
+  --gray: linear-gradient(180.00deg, rgba(114, 140, 122, 0) 91.577%,rgb(34, 97, 74) 100%),rgba(255, 255, 255, 0.2);
+
+
 }

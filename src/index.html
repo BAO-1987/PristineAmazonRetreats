@@ -4,14 +4,26 @@
 
 <body class="page__body">
   <div class="site-container">
-    <include src="./html/_header.html" locals='{"page": "home","header": "header"}'></include>
+    <include src="./html/_header.html" locals='{"page": "home",}'></include>
 
     <main class="main">
 
       <include src="./html/home/_hero.html"></include>
 
-      <include src="./html/home/_additional.html"></include>
-      
+      <div class="container">
+
+        <include src="./html/home/_about.html"></include>
+
+        <include src="./html/home/_tours.html"></include>
+
+      </div>
+
+      <include src="./html/home/_discover.html"></include>
+
+      <include src="./html/home/_reviews.html"></include>
+
+
+
       <include src="./html/_contacts.html"></include>
 
     </main>

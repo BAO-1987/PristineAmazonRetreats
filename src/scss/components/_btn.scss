@@ -9,12 +9,13 @@
   margin: 0;
   border: 1px solid transparent;
   border-radius: var(--radius-big);
-  padding: 11px 23px;
+  padding: 13px 23px;
   width: 100%;
   max-width: fit-content;
   font-family: inherit;
   font-weight: var(--fw-600);
-  line-height: 1.1;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
   color: var(--color-white);
   background-color: var(--color-green-300);
   transition-property: background-color, color, border-color;
@@ -29,6 +30,7 @@
   &--request {
   color: var(--color-white) !important;
   background-color: var(--color-green-300);
+  gap: 8px;
 
      &::before {
       @include bg-cover;
@@ -47,9 +49,9 @@
   }
 
   &--sign {
-    border-color: currentColor;
-    color: var(--color-white);
-    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-dark-900);
+    background-color: var(--color-white);
   }
 
   &--arrow {

@@ -2,96 +2,83 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  position: relative;
-  min-height: 500px;
+  border-radius: 0;
+  min-height: 463px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
+  &::before {
+    background: var(--gray);
+  }
+
   &__inner {
     position: relative;
-    left: 0;
-    padding: 42px 50px;
-    width: 100%;
-    max-width: 470px;
-    background-color: rgba(45, 45, 45, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: var(--radius-big);
+    padding: 86px 112px;
+    background: rgba(238, 238, 238, 0.16);
+    backdrop-filter: blur(13px);
+    gap: 24px;
   }
 
   &__form {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 100%;
-    gap: 11px;
+    max-width: 643px;
+    gap: 8;
 
-    label,
-    textarea {
-      border: 0;
-      width: 100%;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: none;
-    }
-
-    input,
-    textarea {
-      overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      padding: 11 6px 10px 24px;
+    label {
       width: 100%;
       max-width: 100%;
-      color: var(--color-gray-900);
-      background-color: var(--color-white);
+    }
+
+    input {
+      overflow: hidden;
+      border-radius: 8px;
+      padding: 28px 36px;
+      width: 100%;
+      max-width: 100%;
+      color: var(--color-gray-300);
+      box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+      background-color: var(--color-gray-50);
 
       &::placeholder {
-        font-size: 20px;
-        line-height: 1.6;
-        opacity: 0.6;
+        font-style: italic;
+        font-size: 18px;
       }
     }
+  }
 
-    span {
-      display: block;
-      margin-bottom: 17px;
-      line-height: 1.44;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: var(--color-blue-300);
-    }
+  &__desc {
+    width: 100%;
+    max-width: 421px;
   }
 
   h2 {
-    position: absolute;
-    left: 49%;
-    top: 38px;
-    z-index: 1;
-    transform: translateX(-50%);
+    margin-bottom: 4px;
+    font-family: var(--font-family-primary);
+    font-weight: var(--fw-700);
+    font-size: clamp(1.25rem, 1rem + 1.1111vi, 2rem);
+    line-height: 1.25;
+    color: var(--color-white);
+  }
+
+  p {
+    font-weight: var(--fw-500);
+    color: var(--color-white);
   }
 
   .btn {
-    max-width: 100%;
-    color: var(--color-dark-900);
-    background-color: var(--color-blue-300);
-  }
-
-  @include media(tablet-wide) {
-    h2 {
-      top: 10px;
-    }
-  }
-
-  @include media(mobile-l) {
-    input,
-    textarea {
-      padding: 10px;
-    }
-  }
-
-  @include media(mobile-m) {
-    h2 {
-      font-size: 28px;
-    }
+    padding: 26px 20px;
+    font-weight: var(--fw-700);
   }
 }

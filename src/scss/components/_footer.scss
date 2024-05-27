@@ -2,10 +2,9 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  &__bottom {
-    padding: 10px 0;
-    background-color: var(--color-blue-900);
-  }
+  padding: 40px 0;
+  color: var(--color-white);
+  background-color: var(--color-green-400);
 
   &__copy {
     display: flex;
@@ -27,20 +26,24 @@
     }
   }
 
-  @include media(mobile-l) {
-    &__copy {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      gap: 25px;
-    }
-
-    &__policy {
-      justify-content: center;
-    }
-
-    .logo {
-      margin: 0 auto;
-    }
+  .logo {
+   margin: 0 0 14px 0;
   }
+
+  // @include media(mobile-l) {
+  //   &__copy {
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     text-align: center;
+  //     gap: 25px;
+  //   }
+
+  //   &__policy {
+  //     justify-content: center;
+  //   }
+
+  //   .logo {
+  //     margin: 0 auto;
+  //   }
+  // }
 }

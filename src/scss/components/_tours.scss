@@ -1,0 +1,25 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.tours {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  &__content {
+    margin: 0 auto 48px;
+    width: 100%;
+    max-width: 390px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
