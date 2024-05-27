@@ -20,16 +20,17 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
+    padding-right: 16px;
   }
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 24px;
+      margin-right: 16px;
     }
   }
 
   &__link {
-    line-height: 1.62;
+    font-weight: var(--fw-500);
     transition: color 0.3s linear;
 
     &:hover {
@@ -44,7 +45,7 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap: 31px;
+    gap: 16px;
   }
 
   &--footer {

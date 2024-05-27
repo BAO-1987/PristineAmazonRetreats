@@ -7,7 +7,7 @@
   z-index: 10;
   padding: 26px 0;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--color-green-300);
   transition-property: background-color, transform;
   transition-duration: 0.25s;
 
@@ -15,11 +15,11 @@
     transform: translateY(-200%);
   }
 
-  &.scroll,
-  &.active,
-  &--colored {
-    background: var(--color-black);
-  }
+  // &.scroll,
+  // &.active,
+  // &--colored {
+  //   background: var(--color-black);
+  // }
 
   @include media(desktop) {
     .logo {

@@ -47,10 +47,10 @@ body {
 }
 
 .section {
-  padding: rem(100) 0;
+  padding: rem(64) 0;
 
   @include media(tablet-wide) {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 }
 
@@ -62,13 +62,6 @@ body {
   max-width: var(--container-width);
 }
 
-.wrapper {
-  max-width: 1272px;
-
-  &--long {
-    max-width: 1352px;
-  }
-}
 
 .site-container {
   display: grid;
@@ -90,9 +83,8 @@ body {
   &::before {
     content: "";
     position: absolute;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 63.55%, rgba(0, 0, 0, 0.3) 100%);
+    background: var(--white);
     inset: 0;
-    opacity: 1;
   }
 
   &--gray {

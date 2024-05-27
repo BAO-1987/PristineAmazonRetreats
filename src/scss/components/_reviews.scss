@@ -1,46 +1,46 @@
-@use "../utils/functions/" as *;
-@use "../utils/mixins/" as *;
+// @use "../utils/functions/" as *;
+// @use "../utils/mixins/" as *;
 
-.reviews {
-  padding: 83px 0 86px;
+// .reviews {
+//   padding: 83px 0 86px;
 
-  &__list {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2, auto);
-    gap: 30px;
-  }
+//   &__list {
+//     display: grid;
+//     justify-content: space-between;
+//     grid-template-columns: repeat(2, auto);
+//     gap: 30px;
+//   }
 
-  li {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, auto);
-    gap: 30px;
-  }
+//   li {
+//     display: grid;
+//     align-items: center;
+//     grid-template-columns: repeat(2, auto);
+//     gap: 30px;
+//   }
 
-  h3 {
-    font-size: 26px;
-    line-height: 1;
-    letter-spacing: 0.08em;
-  }
+//   h3 {
+//     font-size: 26px;
+//     line-height: 1;
+//     letter-spacing: 0.08em;
+//   }
 
-  p {
-    margin-bottom: 20px;
-  }
+//   p {
+//     margin-bottom: 20px;
+//   }
 
-  &--tours {
-    padding: 72px 0;
-  }
+//   &--tours {
+//     padding: 72px 0;
+//   }
 
-  @include media(tablet) {
-    padding: 40px 0;
+//   @include media(tablet) {
+//     padding: 40px 0;
 
-    &__list,
-    li {
-      justify-items: center;
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 20px;
-    }
-  }
-}
+//     &__list,
+//     li {
+//       justify-items: center;
+//       grid-template-columns: 1fr;
+//       text-align: center;
+//       gap: 20px;
+//     }
+//   }
+// }

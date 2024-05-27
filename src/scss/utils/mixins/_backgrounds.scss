@@ -1,10 +1,10 @@
-@mixin cover-background {
+@mixin bg-cover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-@mixin contain-background {
+@mixin bg-contain {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

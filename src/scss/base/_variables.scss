@@ -24,16 +24,17 @@
   //
   --color-white: #fff;
   --color-black: #000;
-  --color-dark-900: #252B42;
+  --color-dark-900: #252b42;
   --color-green-300: #26a074;
-  --color-gray-50: #EEEEEE;
+  --color-gray-50: #eeeeee;
   --color-gray-300: #737373;
 
   //  radius
   --radius-main: 4px;
+  --radius-big: 16x;
 
   // gradients
-  ---white: linear-gradient(180deg, rgba(95, 161, 200, 0) 0%, #eee 100%), rgba(64, 114, 138, 0.2);
+  --white: linear-gradient(180deg, rgba(95, 161, 200, 0) 0%, #eee 100%), rgba(64, 114, 138, 0.2);
   --wite-second: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, #eee 100%);
   --gray: background: linear-gradient(180deg, rgba(114, 140, 122, 0) 0%, #22614a 100%),
     rgba(
