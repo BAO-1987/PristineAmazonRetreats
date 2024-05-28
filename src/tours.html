@@ -4,20 +4,26 @@
 
 <body class="page__body">
   <div class="site-container">
-    <include src="./html/_header.html" locals='{"page": ""}'></include>
+    <include src="./html/_header.html" locals='{"page": "tours"}'></include>
 
     <main class="main">
 
       <include src="./html/tours/_hero.html"></include>
 
-      <include src="./html/tours/_explore.html"></include>
+      <div class="wrapper">
+        <include src="./html/tours/_explore.html"></include>
+      </div>
 
-      <include src="./html/tours/_tours.html"></include>
 
-      <include src="./html/tours/_values.html"></include>
+      <div class="container">
+
+        <include src="./html/tours/_tours.html"></include>
+
+        <include src="./html/tours/_values.html"></include>
+
+      </div>
 
       <include src="./html/tours/_faq.html"></include>
-
 
       <include src="./html/_contacts.html"></include>
 

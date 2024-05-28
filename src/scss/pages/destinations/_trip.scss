@@ -1,0 +1,26 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.trip {
+  padding-bottom: 58px;
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 24px;
+  }
+
+  .title {
+    margin-bottom: 48px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}

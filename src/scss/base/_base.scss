@@ -83,7 +83,7 @@ body {
   margin-bottom: 16px;
 
   h2 {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   h3 {
@@ -126,6 +126,30 @@ body {
   }
 }
 
+
+.list {
+  padding-left: 25px;
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      top: 7px;
+      left: -15px;
+      width: 5px;
+      height: 5px;
+      background-color: currentColor;
+    }
+
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
 
 
 

@@ -16,13 +16,17 @@ h1 {
   letter-spacing: 0;
 }
 
-h2 {
-  margin-bottom: 64px;
+h2,
+.title {
   font-size: clamp(1.5625rem, 1.4732rem + 0.4464vi, 1.875rem);
   line-height: 1.2;
   letter-spacing: 0.01em;
-  text-align: center;
   color: var(--color-dark-900);
+}
+
+.title {
+  margin: 0 auto 64px;
+  text-align: center;
 }
 
 h3 {

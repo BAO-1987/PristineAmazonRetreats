@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .tours {
+  $root: &;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -9,7 +11,7 @@
   }
 
   &__content {
-    margin: 0 auto 48px;
+    margin: 0 auto 36px;
     width: 100%;
     max-width: 390px;
     text-align: center;
@@ -28,6 +30,16 @@
       span {
         display: none;
       }
+    }
+  }
+
+  &--main {
+    #{$root}__list {
+      gap: 48px 25px;
+    }
+
+    .content {
+      margin-bottom: 40px;
     }
   }
 }

@@ -1,0 +1,29 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.activities {
+  padding-bottom: 145px;
+
+  &__content {
+    margin: 0 auto 44px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 858px;
+    gap: 16px;
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+  }
+}

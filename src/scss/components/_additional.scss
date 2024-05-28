@@ -3,6 +3,7 @@
 
 .additional {
   $root: &;
+  padding-bottom: 55px;
 
   &__list {
     display: flex;
@@ -12,18 +13,26 @@
 
   &__item {
     display: flex;
-    align-items: center;
     width: 100%;
     max-width: 978px;
     gap: 24px;
 
-    &:last-of-type {
+    &--reverse {
       margin-left: auto;
+      align-items: center;
     }
   }
 
   &__desc {
     width: 100%;
     max-width: 422px;
+  }
+
+  .content {
+    margin-bottom: 29px;
+
+    h2 {
+      margin-bottom: 8px;
+    }
   }
 }

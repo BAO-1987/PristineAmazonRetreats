@@ -5,7 +5,7 @@
   background-color: rgba(38, 160, 116, 0.2);
 
   &__list {
-    counter-reset: app;
+    counter-reset: counter;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -16,14 +16,26 @@
     border-radius: var(--radius-big);
     padding: 24px;
     background-color: var(--color-gray-50);
-    counter-reset: app;
+    counter-increment: counter;
 
     &::before {
-      counter-increment: app;
+      content: counter(counter);
       position: relative;
       display: block;
-      font-size: 30px;
-      color: red;
+      margin-bottom: 37px;
+      font-weight: var(--fw-600);
+      font-size: clamp(1.5625rem, 1.3333rem + 1.0185vi, 2.25rem);
+      color: var(--color-dark-900);
+      backdrop-filter: blur(5px);
     }
+  }
+
+  .title {
+    margin-bottom: 48px;
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-size: 18px;
   }
 }

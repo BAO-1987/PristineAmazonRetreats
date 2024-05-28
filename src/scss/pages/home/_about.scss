@@ -2,6 +2,7 @@
 @use "../../utils/mixins" as *;
 
 .about {
+  padding: 65px 0 67px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   width: 100%;
