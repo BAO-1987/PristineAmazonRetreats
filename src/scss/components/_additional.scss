@@ -3,102 +3,27 @@
 
 .additional {
   $root: &;
-  --margin: 100px;
 
-  &__wrapper {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64;
+  }
+
+  &__item {
     display: flex;
     align-items: center;
-    padding-right: max(16px, calc((100% - 1240px) / 2));
-  }
+    width: 100%;
+    max-width: 978px;
+    gap: 24px;
 
-  &__content {
-    width: 570px;
-  }
-
-  &__image {
-    margin-right: var(--margin);
-    width: calc(100% - 570px - 100px);
-
-    img {
-      width: 100%;
+    &:last-of-type {
+      margin-left: auto;
     }
   }
 
-  &--home {
-    p {
-      margin-bottom: 32px;
-    }
-  }
-
-  &--reverse {
-    #{$root}__wrapper {
-      padding-right: 0;
-      padding-left: max(16px, calc((100% - 1175px) / 2));
-    }
-
-    #{$root}__image {
-      margin-right: 0;
-      margin-left: var(--margin);
-      width: calc(100% - 436px - 100px);
-    }
-
-    #{$root}__content {
-      width: 436px;
-    }
-  }
-
-  &--tours {
-    #{$root}__wrapper {
-      padding-right: 0;
-      padding-left: max(16px, calc((100% - 1170px) / 2));
-    }
-
-    #{$root}__image {
-      margin-right: 0;
-      margin-left: 125px;
-      width: calc(100% - 436px - 125px);
-    }
-
-    #{$root}__content {
-      width: 436px;
-    }
-  }
-
-  @include media(tablet-wide) {
-    #{$root}__image {
-      --margin: 50px;
-      width: 650px;
-    }
-  }
-
-  @include media(tablet) {
-    #{$root}__wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-content: center;
-      margin: 0;
-      padding: 16px;
-      gap: 30px;
-    }
-
-    #{$root}__image {
-      width: 100%;
-      margin: 0;
-
-      img {
-        aspect-ratio: 2/1;
-        width: 100%;
-      }
-    }
-
-    #{$root}__content {
-      width: 100%;
-    }
-  }
-
-  @include media(mobile-l) {
-    .btn {
-      max-width: 100%;
-    }
+  &__desc {
+    width: 100%;
+    max-width: 422px;
   }
 }

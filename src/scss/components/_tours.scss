@@ -22,4 +22,12 @@
       font-size: 16px;
     }
   }
+
+  &--home {
+    .cards {
+      span {
+        display: none;
+      }
+    }
+  }
 }

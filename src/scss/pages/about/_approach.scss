@@ -1,0 +1,29 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.approach {
+  background-color: rgba(38, 160, 116, 0.2);
+
+  &__list {
+    counter-reset: app;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  li {
+    overflow: hidden;
+    border-radius: var(--radius-big);
+    padding: 24px;
+    background-color: var(--color-gray-50);
+    counter-reset: app;
+
+    &::before {
+      counter-increment: app;
+      position: relative;
+      display: block;
+      font-size: 30px;
+      color: red;
+    }
+  }
+}

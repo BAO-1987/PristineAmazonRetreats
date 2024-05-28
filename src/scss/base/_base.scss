@@ -85,6 +85,10 @@ body {
   h2 {
     margin-bottom: 8px;
   }
+
+  h3 {
+    margin-bottom: 0;
+  }
 }
 
 .overlay {
@@ -122,64 +126,7 @@ body {
   }
 }
 
-.title {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 32px;
 
-  @include media(tablet) {
-    margin-bottom: 30px;
-  }
-}
 
-.showkase {
-  position: relative;
-  z-index: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.gallery {
-  position: relative;
-  z-index: 1;
-  padding: 86px 0;
 
-  &__content {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(2, auto);
-    margin-bottom: 32px;
-    gap: 24px;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .title {
-    margin-bottom: 0;
-  }
-
-  .btn {
-    align-self: flex-end;
-  }
-
-  @include media(tablet) {
-    padding: 40px 0;
-  }
-
-  @include media(mobile-l) {
-    &__content {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @include media(mobile-m) {
-    &__content {
-      .btn {
-        max-width: 100% !important;
-      }
-    }
-  }
-}
