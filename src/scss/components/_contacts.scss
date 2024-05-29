@@ -47,8 +47,8 @@
       padding: 28px 36px;
       width: 100%;
       max-width: 100%;
-      color: var(--color-gray-300);
       box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+      color: var(--color-gray-300);
       background-color: var(--color-gray-50);
 
       &::placeholder {
@@ -80,5 +80,43 @@
   .btn {
     padding: 26px 20px;
     font-weight: var(--fw-700);
+  }
+
+  @include media(tablet-wide) {
+    &__inner {
+      padding: 40px;
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__desc {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    min-height: 350px;
+
+    &__inner {
+      padding: 20px;
+    }
+
+    &__form {
+      flex-direction: column;
+
+      input {
+        padding: 12px;
+      }
+    }
+
+    .btn {
+      padding: 16px;
+      max-width: 100%;
+    }
   }
 }

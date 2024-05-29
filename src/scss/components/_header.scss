@@ -8,25 +8,26 @@
   padding: 16px 0;
   width: 100%;
   background-color: var(--color-green-200);
-  backdrop-filter: blur(8px);
   transition-property: background-color, transform;
   transition-duration: 0.25s;
-
+  backdrop-filter: blur(8px);
 
   &.hide {
     transform: translateY(-200%);
   }
 
-  // &.scroll,
-  // &.active,
-  // &--colored {
-  //   background: var(--color-black);
-  // }
+  &.active {
+    background-color: var(--color-green-300);
+  }
 
   @include media(desktop) {
     .logo {
       margin-right: 15px;
       max-width: 200px;
+
+      img {
+        object-fit: contain;
+      }
     }
   }
 
@@ -43,7 +44,7 @@
       width: 100%;
       height: var(--vh);
       max-width: 350px;
-      background-color: var(--color-black);
+      background-color: var(--color-green-300);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.25s;

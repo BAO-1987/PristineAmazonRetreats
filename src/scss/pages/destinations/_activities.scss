@@ -26,4 +26,51 @@
       margin-left: auto;
     }
   }
+
+  img {
+    height: 100%;
+  }
+
+  &--wildlife {
+    padding-bottom: 67px;
+
+    .activities__item {
+      align-items: center;
+      grid-template-columns: repeat(2, auto);
+      max-width: 754px;
+      gap: 24px;
+    }
+
+    .activities__desc {
+      width: 100%;
+      max-width: 417px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 90px;
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+    
+    &__list {
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__item {
+      grid-template-columns: 1fr;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+  }
 }

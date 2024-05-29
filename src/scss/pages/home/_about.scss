@@ -2,9 +2,9 @@
 @use "../../utils/mixins" as *;
 
 .about {
-  padding: 65px 0 67px;
   display: grid;
   grid-template-columns: repeat(2, auto);
+  padding: 65px 0 67px;
   width: 100%;
   max-width: 866px;
   gap: 24px;
@@ -17,6 +17,20 @@
     h3 {
       width: 100%;
       max-width: 400px;
+    }
+  }
+
+  @include media(tablet) {
+    grid-template-columns: 1fr;
+    padding: 30px 0;
+
+    &__desc,
+    h3 {
+      max-width: 100%;
+    }
+
+    .content {
+      text-align: center;
     }
   }
 }

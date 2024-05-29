@@ -3,6 +3,8 @@
 @use "../utils/mixins/" as *;
 
 .values {
+  $root: &;
+
   &__image {
     margin-bottom: 48px;
   }
@@ -44,6 +46,49 @@
 
     .title {
       margin-bottom: 46px;
+    }
+  }
+
+  &--wildlife {
+    .title {
+      margin-bottom: 44px;
+    }
+  }
+
+  @include media(tablet-wide) {
+    &--destinantions {
+      .values__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .values__item {
+        &:nth-child(4) {
+          translate: 75px 0;
+        }
+
+        &:nth-child(5) {
+          translate: 150px 0;
+        }
+      }
+    }
+
+    @include media(tablet) {
+     #{$root}__list {
+        grid-template-columns: 1fr;
+      }
+
+      #{$root}__item {
+        translate: none !important;
+      }
+
+      &__image {
+        margin-bottom: 24px;
+      }
+
+      .content,
+      .title {
+        margin-bottom: 36px;
+      }
     }
   }
 }

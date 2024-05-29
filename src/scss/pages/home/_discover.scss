@@ -21,8 +21,18 @@
   }
 
   &__content {
-  h3 {
-    line-height: 1.8;
+    h3 {
+      line-height: 1.8;
+    }
   }
+
+  @include media(tablet) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__desc {
+      order: -1;
+    }
   }
 }

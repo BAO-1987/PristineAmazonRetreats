@@ -1,0 +1,41 @@
+@use "../utils/functions/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.wildlife {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  .content {
+    margin-bottom: 42px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: rgba(37, 43, 66, 0.6);
+    }
+
+  
+  }
+
+  .overlay {
+    margin-bottom: 7px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media(tablet-wide) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

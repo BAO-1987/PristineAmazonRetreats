@@ -32,6 +32,7 @@
     position: relative;
     font-weight: var(--fw-500);
     font-size: 16px;
+    letter-spacing: 0;
     color: var(--color-white);
     background-color: transparent;
     transition: color 0.3s linear;
@@ -68,13 +69,13 @@
     gap: 16px;
 
     .btn {
-      padding: 8px 23px !important;
+      padding: 8px 20px !important;
       &::before {
         content: none !important;
       }
 
       &--request {
-        border-color: rgba(255, 255, 255, 0.4);
+        border-color: rgba(255, 255, 255, 0.4) !important;
       }
     }
   }
@@ -95,7 +96,6 @@
     #{$root}__list {
       margin: 0;
     }
-
   }
 
   @include media(desktop) {
@@ -108,7 +108,7 @@
 
   @include media(tablet) {
     &--footer {
-      padding: 25px 0;
+      margin-bottom: 25px;
       flex-direction: column;
       justify-content: center;
       gap: 25px;
@@ -121,6 +121,15 @@
       #{$root}__list {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 16px;
+      }
+
+       #{$root}__item {
+        margin: 0;
+       }
+
+      #{$root}__block {
+        margin: 0 auto;
       }
     }
   }

@@ -1,0 +1,18 @@
+@use "../utils/functions/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.categories {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  &--wildlife {
+    padding: 60px 0 64px;
+  }
+}

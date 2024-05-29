@@ -12,11 +12,11 @@
   }
 
   li {
+    counter-increment: counter;
     overflow: hidden;
     border-radius: var(--radius-big);
     padding: 24px;
     background-color: var(--color-gray-50);
-    counter-increment: counter;
 
     &::before {
       content: counter(counter);
@@ -37,5 +37,47 @@
   h3 {
     margin-bottom: 24px;
     font-size: 18px;
+  }
+
+  @include media(tablet) {
+    li {
+      padding: 16px;
+
+      &::before {
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        margin-bottom: 16px;
+      }
+    }
+
+    .title {
+      margin-bottom: 36px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      li {
+        &:last-child {
+          grid-column: auto;
+        }
+      }
+    }
   }
 }

@@ -55,17 +55,12 @@
     }
   }
 
-  @include media(tablet-wide) {
-    &--articles {
-      #{$root}__inner {
-        min-height: 350px;
-      }
-
-      #{$root}__content {
-        translate: 0 32px;
-      }
+  &--travel {
+    #{$root}__inner {
+      min-height: 534px;
     }
   }
+
 
   @include media(tablet) {
     &__inner {
@@ -74,25 +69,11 @@
   }
 
   @include media(mobile-m) {
-    &__inner {
+   #{$root}__inner {
       min-height: 400px;
-    }
 
-    &--articles {
-      #{$root}__inner {
-        min-height: 220px;
-      }
-
-      #{$root}__content {
-        translate: 0 60px;
-      }
-
-      h1 {
-        font-size: 25px;
-      }
-
-      .btn {
-        padding: 16px;
+      p {
+        font-size: 18px;
       }
     }
   }

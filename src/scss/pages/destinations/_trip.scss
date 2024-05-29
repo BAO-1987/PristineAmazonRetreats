@@ -23,4 +23,16 @@
   h3 {
     font-size: 16px;
   }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
 }

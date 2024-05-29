@@ -3,6 +3,7 @@
 
 .additional {
   $root: &;
+
   padding-bottom: 55px;
 
   &__list {
@@ -18,8 +19,8 @@
     gap: 24px;
 
     &--reverse {
-      margin-left: auto;
       align-items: center;
+      margin-left: auto;
     }
   }
 
@@ -33,6 +34,27 @@
 
     h2 {
       margin-bottom: 8px;
+    }
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+
+    &__list {
+      gap: 24px;
+    }
+
+    &__item {
+      flex-direction: column;
+      max-width: 100%;
+
+      &--reverse {
+        align-items: normal;
+      }
+    }
+
+    &__desc {
+      max-width: 100%;
     }
   }
 }

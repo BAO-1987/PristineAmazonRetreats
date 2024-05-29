@@ -42,4 +42,58 @@
       margin-bottom: 40px;
     }
   }
+
+  @include media(tablet) {
+    #{$root}__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    li {
+      &:last-child {
+        grid-column: 2 span;
+
+        img {
+          aspect-ratio: 2/1;
+        }
+      }
+
+      .cards__content {
+        height: auto;
+      }
+    }
+
+    &--main {
+      li {
+        &:last-child {
+          grid-column: auto;
+        }
+      }
+    }
+
+    .content {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-l) {
+    #{$root}__list {
+      grid-template-columns: 1fr;
+
+      li {
+        img {
+          aspect-ratio: 2/1;
+        }
+        &:last-child {
+          grid-column: auto;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
+  }
 }

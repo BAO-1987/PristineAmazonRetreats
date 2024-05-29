@@ -68,24 +68,29 @@
   }
 
   @include media(tablet) {
-    padding: 40px 0;
-
     &__item {
+      &::before {
+        bottom: -14px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
       summary {
-        padding: 16px 45px 16px 16px;
+        padding: 14px 32px 14px 0;
 
         &::after {
-          top: 8px;
-        }
-
-        + div {
-          padding: 16px 24px 16px 16px;
-          width: 100%;
+          top: 14px;
         }
       }
     }
 
     h2 {
+      margin-bottom: 30px;
+    }
+
+    .title {
       margin-bottom: 30px;
     }
   }

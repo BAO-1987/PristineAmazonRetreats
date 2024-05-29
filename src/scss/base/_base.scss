@@ -89,6 +89,10 @@ body {
   h3 {
     margin-bottom: 0;
   }
+
+  @include media(tablet) {
+    text-align: center;
+  }
 }
 
 .overlay {
@@ -116,16 +120,15 @@ body {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: 96px;
+  margin-right: 87px;
   width: 100%;
   max-width: 274px;
 
   img {
-    height: 43px;
     width: 100%;
+    height: 43px;
   }
 }
-
 
 .list {
   padding-left: 25px;
@@ -144,13 +147,18 @@ body {
       background-color: currentColor;
     }
 
-
     &:not(:last-child) {
       margin-bottom: 6px;
     }
   }
 }
 
+.images {
+  img {
+    width: 100%;
+  }
 
-
-
+  @include media(tablet) {
+    aspect-ratio: 2/1;
+  }
+}
