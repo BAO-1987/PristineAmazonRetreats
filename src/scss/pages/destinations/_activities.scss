@@ -2,6 +2,8 @@
 @use "../../utils/mixins" as *;
 
 .activities {
+  $root: &;
+
   padding-bottom: 145px;
 
   &__content {
@@ -34,14 +36,14 @@
   &--wildlife {
     padding-bottom: 67px;
 
-    .activities__item {
+     #{$root}__item {
       align-items: center;
       grid-template-columns: repeat(2, auto);
       max-width: 754px;
       gap: 24px;
     }
 
-    .activities__desc {
+    #{$root}__desc {
       width: 100%;
       max-width: 417px;
     }
@@ -57,16 +59,20 @@
 
   @include media(tablet) {
     padding-bottom: 30px;
-    
+
     &__list {
       gap: 24px;
     }
   }
 
   @include media(mobile-l) {
-    &__item {
+     #{$root}__item {
       grid-template-columns: 1fr;
     }
+
+     #{$root}__desc {
+      max-width: 100%;
+     }
 
     img {
       width: 100%;

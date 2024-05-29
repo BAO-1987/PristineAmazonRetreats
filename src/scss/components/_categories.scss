@@ -15,4 +15,25 @@
   &--wildlife {
     padding: 60px 0 64px;
   }
+
+  @include media(tablet) {
+    &--wildlife {
+      padding: 30px 0;
+    }
+  }
+
+  @include media(mobile-l) {
+    grid-template-columns: 1fr;
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+
+    &--wildlife {
+      .categories__content {
+        order: -1;
+      }
+    }
+  }
 }

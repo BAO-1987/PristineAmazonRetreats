@@ -18,10 +18,12 @@
     gap: 23px;
 
     a {
-      transition: color 0.3s linear;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s linear;
 
       &:hover {
-        color: var(--color-blue-300);
+        text-decoration-color: currentcolor;
       }
     }
   }
@@ -31,7 +33,7 @@
   }
 
   @include media(tablet-wide) {
-    padding: 20px;
+    padding: 20px 0;
 
     &__policy {
       gap: 16px;

@@ -7,6 +7,10 @@
 
   &__image {
     margin-bottom: 48px;
+
+    img {
+      min-height: 175px;
+    }
   }
 
   &__list {
@@ -57,28 +61,26 @@
 
   @include media(tablet-wide) {
     &--destinantions {
-      .values__list {
+      #{$root}__list {
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .values__item {
-        &:nth-child(4) {
-          translate: 75px 0;
-        }
-
-        &:nth-child(5) {
-          translate: 150px 0;
+      #{$root}__item {
+        &:nth-child(n + 4) {
+          grid-column: 3 span;
         }
       }
     }
 
     @include media(tablet) {
-     #{$root}__list {
+      #{$root}__list {
         grid-template-columns: 1fr;
       }
 
       #{$root}__item {
-        translate: none !important;
+        &:nth-child(n + 4) {
+          grid-column: auto;
+        }
       }
 
       &__image {

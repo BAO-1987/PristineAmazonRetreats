@@ -68,6 +68,8 @@
   }
 
   @include media(tablet) {
+    padding-bottom: 40px;
+
     &__item {
       &::before {
         bottom: -14px;

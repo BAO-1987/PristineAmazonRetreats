@@ -21,8 +21,6 @@
       font-size: 18px;
       color: rgba(37, 43, 66, 0.6);
     }
-
-  
   }
 
   .overlay {
@@ -36,6 +34,31 @@
   @include media(tablet-wide) {
     &__list {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      &:nth-child(n + 4) {
+        grid-column: 3 span;
+
+        img {
+          aspect-ratio: 3/1;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      img {
+        aspect-ratio: 3/1;
+      }
+      &:nth-child(n + 4) {
+        grid-column: auto;
+      }
     }
   }
 }
